@@ -1,0 +1,14 @@
+Codenames is a popular word association game where two teams compete to correctly guess the codenames of their agents while avoiding the opposing team's agents. Here are the basic rules of Codenames:
+  - Setup: Divide players into two teams: red and blue. One player from each team becomes the spymaster. 25 words are chosen at random. The spymasters have access to a key card that shows the agents, bystanders, and assassins.
+  - Key Cards: There are two key cards, one for each spymaster. Each key card shows which words correspond to red agents, blue agents, bystanders, and assassins.
+  - Teams and Roles: The spymaster's role is to give one-word clues and a number to help their teammates identify the codenames related to their team. The field operatives (non-spymaster players) are the ones who make the guesses.
+  - Gameplay:
+    1. The spymasters take turns. The red team's spymaster starts the game.
+    2. The spymaster gives a clue consisting of one word followed by a number. The word should relate to the codenames on the table, and the number represents how many codenames are related to that clue. The clue cannot be one of the codenames.
+    3. The field operatives make a guess based on the spymaster's clue.
+    4. If the guess is correct then the team may guess again while the total number of guesses is less than the number given by their spymaster. They may also choose to end their turn early.
+      - If the guess is incorrect, the other team's spymaster gives their clue, and the turn passes to the other team.
+      - If the field operatives guess an innocent bystander, the turn ends, and no agent card is placed.
+      - If the field operatives guess an assassin, their team immediately loses the game.
+  - Winning: The game ends when one team has identified all their own agents (9 for red and 8 for blue) and has no more guesses remaining.
+    - The winning team is the first to complete their mission without guessing the assassin.
