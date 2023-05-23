@@ -1,0 +1,96 @@
+agent_name,content,turn,timestamp,visible_to,msg_type
+Moderator,The game starts now!,0,1684870938865726128,all,text
+Moderator,"Here is your spymaster key card:
+Bystander: TOKYO
+Bystander: LITTER
+Blue: ATLANTIS
+Bystander: HONEY
+Blue: JAM
+Blue: AZTEC
+Assassin: KID
+Blue: KNIFE
+Bystander: DOG
+Bystander: TORCH
+Red: BARK
+Red: KETCHUP
+Red: CAT
+Blue: RING
+Bystander: NOVEL
+Blue: HEAD
+Red: APPLE
+Red: ROSE
+Red: POOL
+Blue: SHOP
+Bystander: SMUGGLER
+Blue: FACE
+Red: STAFF
+Red: OPERA
+Red: WAVE",0,1684870938865726128,"['Red Spymaster', 'Blue Spymaster']",text
+Moderator,"Here is the list of codenames:
+TOKYO
+LITTER
+ATLANTIS
+HONEY
+JAM
+AZTEC
+KID
+KNIFE
+DOG
+TORCH
+BARK
+KETCHUP
+CAT
+RING
+NOVEL
+HEAD
+APPLE
+ROSE
+POOL
+SHOP
+SMUGGLER
+FACE
+STAFF
+OPERA
+WAVE",0,1684870938865726128,"['Red Operative', 'Blue Operative']",text
+Moderator,Now the Red team spymaster gives their first clue.,0,1684870938865726128,all,text
+Red Spymaster,The clue for the Red team is: FRUIT 2,1,1684870938865726128,all,text
+Red Operative,The guess for the Red team is: TORCH,1,1684870938865726128,all,text
+Moderator,The card Red Operative guessed was a Bystander card!,1,1684870938865726128,all,text
+Moderator,Red team has no more guesses left! It is now the 1 team's turn.,1,1684870938865726128,all,text
+Blue Spymaster,The clue for the Blue team is: MUSIC 2,2,1684870938865726128,all,text
+Blue Operative,The guess for the Blue team is: APPLE,2,1684870938865726128,all,text
+Moderator,The card Blue Operative guessed was a Red card!,2,1684870938865726128,all,text
+Moderator,Blue team has no more guesses left! It is now the 0 team's turn.,2,1684870938865726128,all,text
+Red Spymaster,The clue for the Red team is: FLORA 2,3,1684870938865726128,all,text
+Red Operative,The guess for the Red team is: JAM,3,1684870938865726128,all,text
+Moderator,The card Red Operative guessed was a Blue card!,3,1684870938865726128,all,text
+Moderator,Red team has no more guesses left! It is now the 1 team's turn.,3,1684870938865726128,all,text
+Moderator,"The clue ""COLD"" is invalid because it is in the word list.",4,1684870938865726128,Blue Spymaster,text
+Blue Spymaster,The clue for the Blue team is: OCEAN 2,4,1684870938865726128,all,text
+Blue Operative,The guess for the Blue team is: ROSE,4,1684870938865726128,all,text
+Moderator,The card Blue Operative guessed was a Red card!,4,1684870938865726128,all,text
+Moderator,Blue team has no more guesses left! It is now the 0 team's turn.,4,1684870938865726128,all,text
+Red Spymaster,The clue for the Red team is: ANIMAL 2,5,1684870938865726128,all,text
+Red Operative,The guess for the Red team is: HONEY,5,1684870938865726128,all,text
+Moderator,The card Red Operative guessed was a Bystander card!,5,1684870938865726128,all,text
+Moderator,Red team has no more guesses left! It is now the 1 team's turn.,5,1684870938865726128,all,text
+Blue Spymaster,The clue for the Blue team is: MYTHOLOGY 2,6,1684870938865726128,all,text
+Blue Operative,The guess for the Blue team is: WAVE,6,1684870938865726128,all,text
+Moderator,The card Blue Operative guessed was a Red card!,6,1684870938865726128,all,text
+Moderator,Blue team has no more guesses left! It is now the 0 team's turn.,6,1684870938865726128,all,text
+Red Spymaster,The clue for the Red team is: COLOR 2,7,1684870938865726128,all,text
+Red Operative,The guess for the Red team is: KNIFE,7,1684870938865726128,all,text
+Moderator,The card Red Operative guessed was a Blue card!,7,1684870938865726128,all,text
+Moderator,Red team has no more guesses left! It is now the 1 team's turn.,7,1684870938865726128,all,text
+Blue Spymaster,The clue for the Blue team is: INSTRUMENT 1,8,1684870938865726128,all,text
+Blue Operative,The guess for the Blue team is: SHOP,8,1684870938865726128,all,text
+Moderator,The card Blue Operative guessed was a Blue card!,8,1684870938865726128,all,text
+Moderator,Blue team still has 1 guesses left! The Blue operative should make another guess.,8,1684870938865726128,all,text
+Blue Operative,The guess for the Blue team is: POOL,8,1684870938865726128,all,text
+Moderator,The card Blue Operative guessed was a Red card!,8,1684870938865726128,all,text
+Moderator,Blue team has no more guesses left! It is now the 0 team's turn.,8,1684870938865726128,all,text
+Red Spymaster,The clue for the Red team is: FURNITURE 1,9,1684870938865726128,all,text
+Red Operative,The guess for the Red team is: RING,9,1684870938865726128,all,text
+Moderator,The card Red Operative guessed was a Blue card!,9,1684870938865726128,all,text
+Moderator,Red team has no more guesses left! It is now the 1 team's turn.,9,1684870938865726128,all,text
+Blue Spymaster,The clue for the Blue team is: ANCIENT 2,10,1684870938865726128,all,text

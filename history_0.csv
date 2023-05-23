@@ -1,0 +1,84 @@
+agent_name,content,turn,timestamp,visible_to,msg_type
+Moderator,The game starts now!,0,1684871459462842449,all,text
+Moderator,"Here is your spymaster key card:
+Blue: PISTOL
+Red: CRANE
+Bystander: OLIVE
+Bystander: BAR
+Bystander: PLANE
+Bystander: PARACHUTE
+Red: BOTTLE
+Red: CHURCH
+Red: SOLDIER
+Blue: ROCK
+Assassin: FORCE
+Bystander: PASS
+Red: LINE
+Red: SEAL
+Blue: MINT
+Bystander: PART
+Red: EYE
+Blue: BEAR
+Blue: ROME
+Red: PUPIL
+Red: SPINE
+Bystander: CAT
+Blue: STADIUM
+Blue: FLY
+Blue: CAP",0,1684871459462842449,"['Red Spymaster', 'Blue Spymaster']",text
+Moderator,"Here is the list of codenames:
+PISTOL
+CRANE
+OLIVE
+BAR
+PLANE
+PARACHUTE
+BOTTLE
+CHURCH
+SOLDIER
+ROCK
+FORCE
+PASS
+LINE
+SEAL
+MINT
+PART
+EYE
+BEAR
+ROME
+PUPIL
+SPINE
+CAT
+STADIUM
+FLY
+CAP",0,1684871459462842449,"['Red Operative', 'Blue Operative']",text
+Moderator,Now the Red team spymaster gives their first clue.,0,1684871459462842449,all,text
+Red Spymaster,The clue for the Red team is: ANIMAL 2,1,1684871459462842449,all,text
+Moderator,"No guess was detected. Please give a guess in the form ""WORD"".",1,1684871459462842449,Red Operative,text
+Red Operative,The guess for the Red team is: BEAR,1,1684871459462842449,all,text
+Moderator,The card Red Operative guessed was a Blue card!,1,1684871459462842449,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,1,1684871459462842449,all,text
+Blue Spymaster,The clue for the Blue team is: INSECT 2,2,1684871459462842449,all,text
+Blue Operative,The guess for the Blue team is: CAT,2,1684871459462842449,all,text
+Moderator,The card Blue Operative guessed was a Bystander card!,2,1684871459462842449,all,text
+Moderator,Blue team has no more guesses left! It is now the Red team's turn.,2,1684871459462842449,all,text
+Red Spymaster,The clue for the Red team is: MEDICAL 2,3,1684871459462842449,all,text
+Red Operative,The guess for the Red team is: SPINE,3,1684871459462842449,all,text
+Moderator,The card Red Operative guessed was a Red card!,3,1684871459462842449,all,text
+Moderator,Red team still has 1 guesses left! The Red operative should make another guess.,3,1684871459462842449,all,text
+Red Operative,The guess for the Red team is: PUPIL,3,1684871459462842449,all,text
+Moderator,The card Red Operative guessed was a Red card!,3,1684871459462842449,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,3,1684871459462842449,all,text
+Blue Spymaster,The clue for the Blue team is: FLYING 2,4,1684871459462842449,all,text
+Blue Operative,The guess for the Blue team is: PART,4,1684871459462842449,all,text
+Moderator,The card Blue Operative guessed was a Bystander card!,4,1684871459462842449,all,text
+Moderator,Blue team has no more guesses left! It is now the Red team's turn.,4,1684871459462842449,all,text
+Red Spymaster,The clue for the Red team is: DRINK 2,5,1684871459462842449,all,text
+Red Operative,The guess for the Red team is: PLANE,5,1684871459462842449,all,text
+Moderator,The card Red Operative guessed was a Bystander card!,5,1684871459462842449,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,5,1684871459462842449,all,text
+Moderator,"The clue ""COLD"" is invalid because it is in the word list.",6,1684871459462842449,Blue Spymaster,text
+Moderator,"The clue ""WATER"" is invalid because it is in the word list.",6,1684871459462842449,Blue Spymaster,text
+Moderator,"The clue ""COLD"" is invalid because it is in the word list.",6,1684871459462842449,Blue Spymaster,text
+Moderator,"The clue ""MINT"" is invalid because it is in the word list.",6,1684871459462842449,Blue Spymaster,text
+Moderator,"The clue ""COLD"" is invalid because it is in the word list.",6,1684871459462842449,Blue Spymaster,text

@@ -1,0 +1,192 @@
+[
+    {
+        "agent_name": "Moderator",
+        "content": "The game starts now!",
+        "turn": 0,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "Here is your spymaster key card:\nBlue: HELICOPTER\nBystander: CHARGE\nBlue: WORM\nBlue: STAFF\nBystander: ATLANTIS\nRed: DINOSAUR\nRed: ROBOT\nBystander: RABBIT\nRed: THIEF\nRed: DATE\nBystander: CLUB\nBlue: HOOD\nRed: ROW\nBlue: CAST\nRed: COMPOUND\nBystander: DROP\nBlue: SHADOW\nAssassin: TRAIN\nBlue: POOL\nBystander: ENGLAND\nBlue: GRACE\nRed: COPPER\nRed: BOARD\nRed: MUG\nBystander: ALPS",
+        "turn": 0,
+        "timestamp": "1684868171102919403",
+        "visible_to": [
+            "Red Spymaster",
+            "Blue Spymaster"
+        ],
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "Here is the list of codenames:\nHELICOPTER\nCHARGE\nWORM\nSTAFF\nATLANTIS\nDINOSAUR\nROBOT\nRABBIT\nTHIEF\nDATE\nCLUB\nHOOD\nROW\nCAST\nCOMPOUND\nDROP\nSHADOW\nTRAIN\nPOOL\nENGLAND\nGRACE\nCOPPER\nBOARD\nMUG\nALPS",
+        "turn": 0,
+        "timestamp": "1684868171102919403",
+        "visible_to": [
+            "Red Operative",
+            "Blue Operative"
+        ],
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "Now the Red team spymaster gives their first clue.",
+        "turn": 0,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Red Spymaster",
+        "content": "The clue for the Red team is: ANCIENT 2",
+        "turn": 1,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Red Operative",
+        "content": "The guess for the Red team is: HELICOPTER",
+        "turn": 1,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "The card Red Operative guessed was a Blue card!",
+        "turn": 1,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "Red team has no more guesses left! It is now the Blue team's turn.",
+        "turn": 1,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Blue Spymaster",
+        "content": "The clue for the Blue team is: MYTHOLOGY 2",
+        "turn": 2,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Blue Operative",
+        "content": "The guess for the Blue team is: ATLANTIS",
+        "turn": 2,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "The card Blue Operative guessed was a Bystander card!",
+        "turn": 2,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "Blue team has no more guesses left! It is now the Red team's turn.",
+        "turn": 2,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Red Spymaster",
+        "content": "The clue for the Red team is: TIMELESS 2",
+        "turn": 3,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Red Operative",
+        "content": "The guess for the Red team is: DINOSAUR",
+        "turn": 3,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "The card Red Operative guessed was a Red card!",
+        "turn": 3,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Red Operative",
+        "content": "The guess for the Red team is: WORM",
+        "turn": 3,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "The card Red Operative guessed was a Blue card!",
+        "turn": 3,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "Red team has no more guesses left! It is now the Blue team's turn.",
+        "turn": 3,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Blue Spymaster",
+        "content": "The clue for the Blue team is: LEGENDARY 2",
+        "turn": 4,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Blue Operative",
+        "content": "The guess for the Blue team is: ROBOT",
+        "turn": 4,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "The card Blue Operative guessed was a Red card!",
+        "turn": 4,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Moderator",
+        "content": "Blue team has no more guesses left! It is now the Red team's turn.",
+        "turn": 4,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    },
+    {
+        "agent_name": "Red Spymaster",
+        "content": "The clue for the Red team is: CRIMINAL 2",
+        "turn": 5,
+        "timestamp": "1684868171102919403",
+        "visible_to": "all",
+        "msg_type": "text"
+    }
+]

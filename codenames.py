@@ -2,7 +2,7 @@ from collections import namedtuple
 from dataclasses import dataclass
 from enum import Enum
 from functools import cached_property
-from typing import List, Dict, Union, Optional, Tuple
+from typing import List, Dict, Union, Optional
 import random
 import re
 
@@ -13,10 +13,6 @@ from chatarena.config import EnvironmentConfig
 
 with open("words.txt", "r") as f:
     DEFAULT_WORD_LIST = [line.strip() for line in f.readlines()]
-
-with open("codenames_description.txt", "r") as f:
-    CODENAMES_DESCRIPTION = f.read()
-
 
 class Codenames(Environment):
     """Chat environment for two language agents to play Codenames.
@@ -76,6 +72,7 @@ class Codenames(Environment):
             self.word_list = DEFAULT_WORD_LIST
             self._board: Dict[str, Codenames.GameBoard.Card] = {}
             self.cards_each = cards_each
+            self.deck = set()
             self.reset()
 
         def reset(self):
@@ -109,14 +106,22 @@ class Codenames(Environment):
             random.shuffle(board)
 
             self._board = {card.word: card for card in board}
-            del deck
+        
+        @cached_property
+        def board_words(self):
+            return set(self._board.keys())
+            
 
-        def reveal_card(self, word: str):
+        def try_reveal_card(self, word: str):
             card = self._board.get(word)
             if card is None:
-                raise ValueError(f"Card '{word}' not found.")
+                raise ValueError(f"\"{word}\" is not a valid guess because it is not in the list.")
             elif card.revealed:
-                raise ValueError(f"Card '{word}' has already been revealed.")
+                raise ValueError(f"\"{word}\" is not a valid guess because it has already been guessed.")
+            return card
+
+        def reveal_card(self, word: str):
+            card = self.try_reveal_card(word)
             card.revealed = True
             return card
 
@@ -135,7 +140,7 @@ class Codenames(Environment):
 
     def __init__(self, word_list: Optional[List[str]] = None, **kwargs):
         self.teams = [
-            Codenames.Team(name=name, idx=i) for i, name in enumerate(team_names)
+            Codenames.Team(name=name, idx=i) for i, name in enumerate(self.team_names)
         ]
         player_names = self.teams[0].members + self.teams[1].members
         super().__init__(player_names=player_names, word_list=word_list, **kwargs)
@@ -192,24 +197,22 @@ class Codenames(Environment):
 
         self.message_pool.reset()
 
-        self._moderator_speak("Welcome to Codenames!")
-        self._moderator_speak(CODENAMES_DESCRIPTION)
-        self._moderator_speak(f"Now the game starts!")
+        self._moderator_speak("The game starts now!")
         # Inform spymasters of the board
-        for team in self.teams:
-            self._moderator_speak(
-                f"You are the {team.name} team spymaster.", visible_to=team.spymaster
-            )
+        # for team in self.teams:
+        #     self._moderator_speak(
+        #         f"You are the {team.name} team spymaster.", visible_to=team.spymaster
+        #     )
         self._moderator_speak(
-            f"Here is your key card:\n{self.board.display_board(spymaster=True)}",
+            f"Here is your spymaster key card:\n{self.board.display_board(spymaster=True)}",
             visible_to=[team.spymaster for team in self.teams],
         )
 
         # inform operatives
-        for team in self.teams:
-            self._moderator_speak(
-                f"You are the {team.name} team operative.", visible_to=team.operative
-            )
+        # for team in self.teams:
+        #     self._moderator_speak(
+        #         f"You are the {team.name} team operative.", visible_to=team.operative
+        #     )
         self._moderator_speak(
             f"Here is the list of codenames:\n{self.board.display_board(spymaster=False)}",
             visible_to=[team.operative for team in self.teams],
@@ -244,37 +247,62 @@ class Codenames(Environment):
                 player_name, turn=self._current_turn
             )
 
-    def _parse_clue(self, action) -> Optional[Clue]:
+    def _parse_clue(self, action) -> Clue:
         """
         Check whether the clue given by the spymaster is valid
         """
         # Get the word enclosed by quote marks with regex
-        match = re.search(r"(\w+)(:)? (\d+)", action)
+        match = re.search(r"(\w+)[:,]? (\d+)", action)
         # Maybe findall is better
         if match:
             word, number = match.groups(1)
             word = str(word)
             number = int(number)
         else:
-            return None
+            raise ValueError("No clue detected. Please give a clue in the form \"WORD: digit\".")
 
-        if word.upper() in self.board.word_list:
+        if word.upper() in self.board.board_words:
             "The word in the word list (illegal) or the number is not a digit"
-            return None
+            raise ValueError(f"The clue \"{word.upper()}\" is invalid because it is in the word list.")
+
 
         return Codenames.Clue(word, number)
 
-    def _parse_guess(self, action) -> Optional[str]:
+    def _parse_guess(self, action) -> str:
         # Get the word enclosed by quote marks or is capitalized
-        # Requires at least two capital letters to avoid false positives "I"
-        match = re.search(r"([A-Z][A-Z]+)|(\"\w+\")", action)
+        # Requires at least two capital letters to avoid false positives "I" but has to catch "ICE CREAM"
+        match = re.search(r"([A-Z]+[ A-Z][A-Z]+)|(\"[\w ]+\")", action)
         # Maybe findall is better
         if match:
             for group in match.groups():
                 if group is not None:
                     return group.strip('"').upper()
+        
+        raise ValueError(f"No guess was detected. Please give a guess in the form \"WORD\".")
 
-        return None
+    def check_action(self, action: str, player_name: str) -> bool:
+        """
+        check whether the action is valid
+        """
+        # Check whether the player is the next player
+        if player_name != self.get_next_player():
+            return False
+        
+        try:
+            if self._current_phase == Codenames.Phase.GIVE_CLUE:
+                clue = self._parse_clue(action)
+            elif self._current_phase == Codenames.Phase.GUESS_CLUE:
+                # Parse the guess
+                guess = self._parse_guess(action)
+                self.board.try_reveal_card(guess)
+        except ValueError as e:
+            message = e.args[0]
+            self._moderator_speak(message, visible_to=player_name)
+            return False
+            
+        
+        return True
+    
 
     def _moderator_speak(self, text: str, visible_to: Union[str, List[str]] = "all"):
         """
@@ -337,13 +365,12 @@ class Codenames(Environment):
             self.message_pool.append_message(message)
             self._clue_history.append(clue)
             self._current_phase = Codenames.Phase.GUESS_CLUE
-            self._remaining_guesses = clue.count + 1
+            self._remaining_guesses = clue.count
 
         elif self._current_phase == Codenames.Phase.GUESS_CLUE:
             # Parse the guess
             guess = self._parse_guess(action)
-            if guess is None:
-                raise ValueError(f"No guess detected in action: {action}")
+                
 
             card = self.board.reveal_card(guess)
 
@@ -366,7 +393,7 @@ class Codenames(Environment):
             else:
                 # Card is red or blue
                 self._moderator_speak(
-                    f"The card {player_name} guessed was a {card.type} card!"
+                    f"The word {player_name} guessed was a {card.type} word!"
                 )
 
                 if card.type.value == self._current_team_idx:
@@ -375,7 +402,8 @@ class Codenames(Environment):
                     self._remaining_guesses = 0
 
                 previous_potential = self._game_state_potential()
-                self.remaining_cards[self.teams[card.type.value]] -= 1
+                if card.type.value < len(self.teams):
+                    self.remaining_cards[self.teams[card.type.value]] -= 1
                 current_potential = self._game_state_potential()
 
                 if min(self.remaining_cards.values()) <= 0:
@@ -384,7 +412,7 @@ class Codenames(Environment):
                         key=self.remaining_cards.__getitem__,
                     )
                     self._moderator_speak(
-                        f"{winning_team.name} team has no more cards left! {winning_team.name} team won!"
+                        f"{winning_team.name} team has no more words left! {winning_team.name} team won!"
                     )
                     for team in self.teams:
                         for player in team.members:
@@ -399,12 +427,17 @@ class Codenames(Environment):
                             rewards[player] = potential_diff
 
                     if self._remaining_guesses <= 0:
+                        # Update this first to use it in the message
+                        self._current_team_idx = (self._current_team_idx + 1) % len(self.teams)
                         self._moderator_speak(
-                            f"{current_team.name} team has no more guesses left! It is now the {self.teams[1 - self._current_team_idx].name} team's turn."
+                            f"{current_team.name} team has no more guesses left! It is now the {self.teams[self._current_team_idx].name} team's turn."
                         )
-                        self._current_team_idx = 1 - self._current_team_idx
                         self._current_phase = Codenames.Phase.GIVE_CLUE
                         self._current_turn += 1
+                    else:
+                        self._moderator_speak(
+                            f"{current_team.name} team still has {self._remaining_guesses} guesses left! The {current_team.name} operative should make another guess."
+                        )
 
         else:
             raise ValueError(f"Unknown phase: {self._current_phase}")

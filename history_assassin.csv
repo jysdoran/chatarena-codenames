@@ -1,0 +1,73 @@
+agent_name,content,turn,timestamp,visible_to,msg_type
+Moderator,The game starts now!,0,1684871909767405609,all,text
+Moderator,"Here is your spymaster key card:
+Red: HOOK
+Red: PORT
+Red: CENTAUR
+Blue: OLYMPUS
+Blue: KANGAROO
+Blue: MILLIONAIRE
+Blue: AGENT
+Bystander: QUEEN
+Bystander: WAKE
+Bystander: PIE
+Bystander: LAWYER
+Red: WHIP
+Blue: ANTARCTICA
+Bystander: SNOWMAN
+Red: OIL
+Bystander: VAN
+Red: WITCH
+Bystander: LION
+Blue: CHOCOLATE
+Blue: HOOD
+Red: MOUNT
+Assassin: BUFFALO
+Red: LINE
+Blue: CRICKET
+Red: FIGHTER",0,1684871909767405609,"['Red Spymaster', 'Blue Spymaster']",text
+Moderator,"Here is the list of codenames:
+HOOK
+PORT
+CENTAUR
+OLYMPUS
+KANGAROO
+MILLIONAIRE
+AGENT
+QUEEN
+WAKE
+PIE
+LAWYER
+WHIP
+ANTARCTICA
+SNOWMAN
+OIL
+VAN
+WITCH
+LION
+CHOCOLATE
+HOOD
+MOUNT
+BUFFALO
+LINE
+CRICKET
+FIGHTER",0,1684871909767405609,"['Red Operative', 'Blue Operative']",text
+Moderator,Now the Red team spymaster gives their first clue.,0,1684871909767405609,all,text
+Moderator,"The clue ""PIRATE"" is invalid because it is in the word list.",1,1684871909767405609,Red Spymaster,text
+Moderator,"The clue ""PIRATE"" is invalid because it is in the word list.",1,1684871909767405609,Red Spymaster,text
+Red Spymaster,The clue for the Red team is: CARDS 2,1,1684871909767405609,all,text
+Red Operative,The guess for the Red team is: LAWYER,1,1684871909767405609,all,text
+Moderator,The word Red Operative guessed was a Bystander word!,1,1684871909767405609,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,1,1684871909767405609,all,text
+Moderator,"The clue ""AUSTRALIA"" is invalid because it is in the word list.",2,1684871909767405609,Blue Spymaster,text
+Blue Spymaster,The clue for the Blue team is: ANIMALS 3,2,1684871909767405609,all,text
+Blue Operative,The guess for the Blue team is: VAN,2,1684871909767405609,all,text
+Moderator,The word Blue Operative guessed was a Bystander word!,2,1684871909767405609,all,text
+Moderator,Blue team has no more guesses left! It is now the Red team's turn.,2,1684871909767405609,all,text
+Red Spymaster,The clue for the Red team is: ENERGY 2,3,1684871909767405609,all,text
+Red Operative,The guess for the Red team is: KANGAROO,3,1684871909767405609,all,text
+Moderator,The word Red Operative guessed was a Blue word!,3,1684871909767405609,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,3,1684871909767405609,all,text
+Blue Spymaster,The clue for the Blue team is: SWEETS 2,4,1684871909767405609,all,text
+Blue Operative,The guess for the Blue team is: BUFFALO,4,1684871909767405609,all,text
+Moderator,Blue Operative guessed the assassin! Blue team lost!,4,1684871909767405609,all,text

@@ -12,3 +12,4 @@ Codenames is a popular word association game where two teams compete to correctl
       - If the field operatives guess an assassin, their team immediately loses the game.
   - Winning: The game ends when one team has identified all their own agents (9 for red and 8 for blue) and has no more guesses remaining.
     - The winning team is the first to complete their mission without guessing the assassin.
+You are currently playing in a Codenames competition.

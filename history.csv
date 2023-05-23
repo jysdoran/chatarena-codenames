@@ -1,0 +1,105 @@
+agent_name,content,turn,timestamp,visible_to,msg_type
+Moderator,The game starts now!,0,1684872554106971167,all,text
+Moderator,"Here is your spymaster key card:
+Blue: CRASH
+Blue: SHOE
+Blue: PLASTIC
+Bystander: FLUTE
+Bystander: MAIL
+Red: SNOW
+Red: AUSTRALIA
+Assassin: PORT
+Red: PIT
+Red: SHADOW
+Blue: JAM
+Red: MERCURY
+Bystander: MOUNT
+Blue: FORCE
+Bystander: THEATER
+Bystander: CRANE
+Red: SATELLITE
+Blue: WELL
+Red: SPACE
+Bystander: PYRAMID
+Blue: VET
+Bystander: LION
+Blue: BOND
+Red: CHAIR
+Red: CAP",0,1684872554106971167,"['Red Spymaster', 'Blue Spymaster']",text
+Moderator,"Here is the list of codenames:
+CRASH
+SHOE
+PLASTIC
+FLUTE
+MAIL
+SNOW
+AUSTRALIA
+PORT
+PIT
+SHADOW
+JAM
+MERCURY
+MOUNT
+FORCE
+THEATER
+CRANE
+SATELLITE
+WELL
+SPACE
+PYRAMID
+VET
+LION
+BOND
+CHAIR
+CAP",0,1684872554106971167,"['Red Operative', 'Blue Operative']",text
+Moderator,Now the Red team spymaster gives their first clue.,0,1684872554106971167,all,text
+Red Spymaster,The clue for the Red team is: COLD 2,1,1684872554106971167,all,text
+Red Operative,The guess for the Red team is: MOUNT,1,1684872554106971167,all,text
+Moderator,The word Red Operative guessed was a Bystander word!,1,1684872554106971167,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,1,1684872554106971167,all,text
+Blue Spymaster,The clue for the Blue team is: FRUIT 2,2,1684872554106971167,all,text
+Blue Operative,The guess for the Blue team is: SNOW,2,1684872554106971167,all,text
+Moderator,The word Blue Operative guessed was a Red word!,2,1684872554106971167,all,text
+Moderator,Blue team has no more guesses left! It is now the Red team's turn.,2,1684872554106971167,all,text
+Red Spymaster,The clue for the Red team is: OCEAN 2,3,1684872554106971167,all,text
+Moderator,"""ANTARCTICA"" is not a valid guess because it is not in the list.",3,1684872554106971167,Red Operative,text
+Moderator,"""ICE"" is not a valid guess because it is not in the list.",3,1684872554106971167,Red Operative,text
+Moderator,"""ICE"" is not a valid guess because it is not in the list.",3,1684872554106971167,Red Operative,text
+Moderator,"""ICE"" is not a valid guess because it is not in the list.",3,1684872554106971167,Red Operative,text
+Red Operative,The guess for the Red team is: AUSTRALIA,3,1684872554106971167,all,text
+Moderator,The word Red Operative guessed was a Red word!,3,1684872554106971167,all,text
+Moderator,Red team still has 1 guesses left! The Red operative should make another guess.,3,1684872554106971167,all,text
+Moderator,"""ICE"" is not a valid guess because it is not in the list.",3,1684872554106971167,Red Operative,text
+Moderator,"""ICE"" is not a valid guess because it is not in the list.",3,1684872554106971167,Red Operative,text
+Moderator,"""ICE"" is not a valid guess because it is not in the list.",3,1684872554106971167,Red Operative,text
+Red Operative,The guess for the Red team is: PYRAMID,3,1684872554106971167,all,text
+Moderator,The word Red Operative guessed was a Bystander word!,3,1684872554106971167,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,3,1684872554106971167,all,text
+Blue Spymaster,The clue for the Blue team is: MUSIC 2,4,1684872554106971167,all,text
+Moderator,"""APPLE"" is not a valid guess because it is not in the list.",4,1684872554106971167,Blue Operative,text
+Moderator,"""APPLE"" is not a valid guess because it is not in the list.",4,1684872554106971167,Blue Operative,text
+Blue Operative,The guess for the Blue team is: FLUTE,4,1684872554106971167,all,text
+Moderator,The word Blue Operative guessed was a Bystander word!,4,1684872554106971167,all,text
+Moderator,Blue team has no more guesses left! It is now the Red team's turn.,4,1684872554106971167,all,text
+Red Spymaster,The clue for the Red team is: HEAT 2,5,1684872554106971167,all,text
+Red Operative,The guess for the Red team is: SATELLITE,5,1684872554106971167,all,text
+Moderator,The word Red Operative guessed was a Red word!,5,1684872554106971167,all,text
+Moderator,Red team still has 1 guesses left! The Red operative should make another guess.,5,1684872554106971167,all,text
+Moderator,"""SATELLITE"" is not a valid guess because it has already been guessed.",5,1684872554106971167,Red Operative,text
+Red Operative,The guess for the Red team is: SHADOW,5,1684872554106971167,all,text
+Moderator,The word Red Operative guessed was a Red word!,5,1684872554106971167,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,5,1684872554106971167,all,text
+Blue Spymaster,The clue for the Blue team is: FOOT 2,6,1684872554106971167,all,text
+Blue Operative,The guess for the Blue team is: CHAIR,6,1684872554106971167,all,text
+Moderator,The word Blue Operative guessed was a Red word!,6,1684872554106971167,all,text
+Moderator,Blue team has no more guesses left! It is now the Red team's turn.,6,1684872554106971167,all,text
+Red Spymaster,The clue for the Red team is: MOVIE 3,7,1684872554106971167,all,text
+Red Operative,The guess for the Red team is: CRASH,7,1684872554106971167,all,text
+Moderator,The word Red Operative guessed was a Blue word!,7,1684872554106971167,all,text
+Moderator,Red team has no more guesses left! It is now the Blue team's turn.,7,1684872554106971167,all,text
+Blue Spymaster,The clue for the Blue team is: CIRCLE 2,8,1684872554106971167,all,text
+Blue Operative,The guess for the Blue team is: SHOE,8,1684872554106971167,all,text
+Moderator,The word Blue Operative guessed was a Blue word!,8,1684872554106971167,all,text
+Moderator,Blue team still has 1 guesses left! The Blue operative should make another guess.,8,1684872554106971167,all,text
+Blue Operative,The guess for the Blue team is: PORT,8,1684872554106971167,all,text
+Moderator,Blue Operative guessed the assassin! Blue team lost!,8,1684872554106971167,all,text
